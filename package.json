@@ -1,0 +1,23 @@
+{
+	"name": "xwing-data-graphql",
+	"version": "1.0.0",
+	"description": "",
+	"main": "serve.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bmds/xwing-data-graphql.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bmds/xwing-data-graphql/issues"
+	},
+	"homepage": "https://github.com/bmds/xwing-data-graphql#readme",
+	"dependencies": {
+		"express": "^4.15.5",
+		"express-graphql": "^0.6.11",
+		"graphql": "^0.11.3",
+		"node-fetch": "^1.7.3"
+	}
+}
