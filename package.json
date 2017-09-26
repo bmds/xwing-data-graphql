@@ -5,6 +5,7 @@
 	"main": "serve.js",
 	"scripts": {
 		"start": "node serve.js",
+		"deploy": "now --public bmds/xwing-data-graphql && now alias",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
