@@ -11,7 +11,11 @@ let pilots = [];
 
 function getData(type) {
 	return fetch(`https://raw.githubusercontent.com/guidokessels/xwing-data/master/data/${type}.js`)
-		.then(response => response.json());
+		.then(response => response.json())
+		.then(jsonData => jsonData.reduce((pilotObject, currentPilot) => {
+			pilotObject[currentPilot.xws] = currentPilot;
+			return pilotObject;
+		}, {}));
 }
 
 function getPilots() {
@@ -71,7 +75,7 @@ const PilotType = new GraphQLObjectType({
 });
 
 function filterPilots(args, pilots) {
-	return pilots.find((pilot) => pilot.xws === args.xws);
+	return pilots[args.xws];
 }
 
 
